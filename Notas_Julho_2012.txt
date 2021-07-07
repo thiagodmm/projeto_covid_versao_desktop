@@ -1,9 +1,0 @@
-06/07/2021
-
-Notas sobre o Projeto Integrador em Java + Swing + Banco de Dados SQL
-
-20:47
-Testando sincronização com Jaderson.
-
-21:49
-Última atualização do dia.
