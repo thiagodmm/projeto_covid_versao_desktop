@@ -17,6 +17,7 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
     public GUIPrimeiraTela() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,6 +28,7 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlDisplay = new javax.swing.JLabel();
         jlTitulo2 = new javax.swing.JLabel();
         jlTitulo1 = new javax.swing.JLabel();
         jlTitulo3 = new javax.swing.JLabel();
@@ -39,6 +41,11 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1400, 840));
         getContentPane().setLayout(null);
+
+        jlDisplay.setText("* Label Display");
+        jlDisplay.setPreferredSize(new java.awt.Dimension(1400, 840));
+        getContentPane().add(jlDisplay);
+        jlDisplay.setBounds(0, 0, 1400, 840);
 
         jlTitulo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jlTitulo2.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,6 +77,11 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
         jbIniciar.setForeground(new java.awt.Color(255, 255, 255));
         jbIniciar.setText("INICIAR");
         jbIniciar.setPreferredSize(new java.awt.Dimension(150, 40));
+        jbIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbIniciarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jbIniciar);
         jbIniciar.setBounds(220, 140, 150, 40);
 
@@ -94,6 +106,13 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIniciarActionPerformed
+        // TODO add your handling code here:
+        GUICheckin gcheck = new GUICheckin();
+        jlDisplay.add(gcheck);
+        gcheck.setVisible(true);
+    }//GEN-LAST:event_jbIniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +154,7 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
     private javax.swing.JButton jbIniciar;
     private javax.swing.JLabel jlAvisoCadastro;
     private javax.swing.JLabel jlCreditos;
+    private javax.swing.JLabel jlDisplay;
     private javax.swing.JLabel jlPlanoDeFundo;
     private javax.swing.JLabel jlTitulo1;
     private javax.swing.JLabel jlTitulo2;
