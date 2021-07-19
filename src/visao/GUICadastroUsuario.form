@@ -65,19 +65,19 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jtfNome" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfEmail" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfDataNasc" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfPeso" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfAltura" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfAlergias" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfNome_" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfEmail_" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfDataNasc_" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfPeso_" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfAltura_" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfAlergias_" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jbCadastrar" min="-2" max="-2" attributes="0"/>
+                              <Component id="jbCadastrar_" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jbCancelar" min="-2" max="-2" attributes="0"/>
+                              <Component id="jbCancelar_" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jtfDoencas" min="-2" max="-2" attributes="0"/>
+                          <Component id="jtfDoencas_" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="95" max="32767" attributes="0"/>
@@ -92,42 +92,42 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlNome" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfNome_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfEmail_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfDataNasc" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfDataNasc_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlPeso" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfPeso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfPeso_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlAltura" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfAltura" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfAltura_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlAlergias" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfAlergias" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfAlergias_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jlDoencas" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jtfDoencas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtfDoencas_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jbCadastrar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbCadastrar_" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbCancelar_" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="35" max="32767" attributes="0"/>
               </Group>
@@ -202,59 +202,59 @@
             <Property name="text" type="java.lang.String" value="Doen&#xe7;as:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfNome">
+        <Component class="javax.swing.JTextField" name="jtfNome_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[250, 24]"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfEmail">
+        <Component class="javax.swing.JTextField" name="jtfEmail_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[250, 24]"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfDataNasc">
+        <Component class="javax.swing.JTextField" name="jtfDataNasc_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[100, 24]"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfDataNascActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtfDataNasc_ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfPeso">
+        <Component class="javax.swing.JTextField" name="jtfPeso_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[60, 24]"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfAltura">
+        <Component class="javax.swing.JTextField" name="jtfAltura_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[60, 24]"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfAlergias">
+        <Component class="javax.swing.JTextField" name="jtfAlergias_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[250, 24]"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jtfDoencas">
+        <Component class="javax.swing.JTextField" name="jtfDoencas_">
           <Properties>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[250, 24]"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jbCadastrar">
+        <Component class="javax.swing.JButton" name="jbCadastrar_">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="7b" green="55" red="2f" type="rgb"/>
@@ -271,10 +271,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCadastrarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCadastrar_ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jbCancelar">
+        <Component class="javax.swing.JButton" name="jbCancelar_">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="7b" green="55" red="2f" type="rgb"/>
@@ -291,7 +291,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCancelarActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCancelar_ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

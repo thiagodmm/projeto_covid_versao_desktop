@@ -28,13 +28,13 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
 
 	modelo.UsuarioVO u = new modelo.UsuarioVO();
 
-	u.setNome(jtfNome.getText());
-        u.setEmail(jtfEmail.getText());
-        u.setDataNasc(Integer.parseInt(jtfDataNasc.getText()));
-        u.setPeso(Double.parseDouble(jtfPeso.getText()));
-        u.setAltura(Double.parseDouble(jtfAltura.getText()));
-        u.setAlergias(jtfAlergias.getText());
-        u.setDoencas(jtfDoencas.getText());
+	u.setNome(jtfNome_.getText());
+        u.setEmail(jtfEmail_.getText());
+        u.setDataNasc(Integer.parseInt(jtfDataNasc_.getText()));
+        u.setPeso(Double.parseDouble(jtfPeso_.getText()));
+        u.setAltura(Double.parseDouble(jtfAltura_.getText()));
+        u.setAlergias(jtfAlergias_.getText());
+        u.setDoencas(jtfDoencas_.getText());
         
 	// Chama o usuário serviços que fará a inserção dos dados da classe dentro do banco 
 	servicos.UsuarioServicos us = servicos.ServicosFactory.getUsuarioServicos();
@@ -71,15 +71,15 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
         jlAltura = new javax.swing.JLabel();
         jlAlergias = new javax.swing.JLabel();
         jlDoencas = new javax.swing.JLabel();
-        jtfNome = new javax.swing.JTextField();
-        jtfEmail = new javax.swing.JTextField();
-        jtfDataNasc = new javax.swing.JTextField();
-        jtfPeso = new javax.swing.JTextField();
-        jtfAltura = new javax.swing.JTextField();
-        jtfAlergias = new javax.swing.JTextField();
-        jtfDoencas = new javax.swing.JTextField();
-        jbCadastrar = new javax.swing.JButton();
-        jbCancelar = new javax.swing.JButton();
+        jtfNome_ = new javax.swing.JTextField();
+        jtfEmail_ = new javax.swing.JTextField();
+        jtfDataNasc_ = new javax.swing.JTextField();
+        jtfPeso_ = new javax.swing.JTextField();
+        jtfAltura_ = new javax.swing.JTextField();
+        jtfAlergias_ = new javax.swing.JTextField();
+        jtfDoencas_ = new javax.swing.JTextField();
+        jbCadastrar_ = new javax.swing.JButton();
+        jbCancelar_ = new javax.swing.JButton();
         jpTop = new javax.swing.JPanel();
         jlTituloPrincipal = new javax.swing.JLabel();
         jlTituloAdmin = new javax.swing.JLabel();
@@ -115,44 +115,44 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
         jlDoencas.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jlDoencas.setText("Doenças:");
 
-        jtfNome.setPreferredSize(new java.awt.Dimension(250, 24));
+        jtfNome_.setPreferredSize(new java.awt.Dimension(250, 24));
 
-        jtfEmail.setPreferredSize(new java.awt.Dimension(250, 24));
+        jtfEmail_.setPreferredSize(new java.awt.Dimension(250, 24));
 
-        jtfDataNasc.setPreferredSize(new java.awt.Dimension(100, 24));
-        jtfDataNasc.addActionListener(new java.awt.event.ActionListener() {
+        jtfDataNasc_.setPreferredSize(new java.awt.Dimension(100, 24));
+        jtfDataNasc_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfDataNascActionPerformed(evt);
+                jtfDataNasc_ActionPerformed(evt);
             }
         });
 
-        jtfPeso.setPreferredSize(new java.awt.Dimension(60, 24));
+        jtfPeso_.setPreferredSize(new java.awt.Dimension(60, 24));
 
-        jtfAltura.setPreferredSize(new java.awt.Dimension(60, 24));
+        jtfAltura_.setPreferredSize(new java.awt.Dimension(60, 24));
 
-        jtfAlergias.setPreferredSize(new java.awt.Dimension(250, 24));
+        jtfAlergias_.setPreferredSize(new java.awt.Dimension(250, 24));
 
-        jtfDoencas.setPreferredSize(new java.awt.Dimension(250, 24));
+        jtfDoencas_.setPreferredSize(new java.awt.Dimension(250, 24));
 
-        jbCadastrar.setBackground(new java.awt.Color(47, 85, 123));
-        jbCadastrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jbCadastrar.setForeground(new java.awt.Color(255, 255, 255));
-        jbCadastrar.setText("Cadastrar");
-        jbCadastrar.setPreferredSize(new java.awt.Dimension(100, 26));
-        jbCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        jbCadastrar_.setBackground(new java.awt.Color(47, 85, 123));
+        jbCadastrar_.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jbCadastrar_.setForeground(new java.awt.Color(255, 255, 255));
+        jbCadastrar_.setText("Cadastrar");
+        jbCadastrar_.setPreferredSize(new java.awt.Dimension(100, 26));
+        jbCadastrar_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCadastrarActionPerformed(evt);
+                jbCadastrar_ActionPerformed(evt);
             }
         });
 
-        jbCancelar.setBackground(new java.awt.Color(47, 85, 123));
-        jbCancelar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jbCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        jbCancelar.setText("Cancelar");
-        jbCancelar.setPreferredSize(new java.awt.Dimension(100, 26));
-        jbCancelar.addActionListener(new java.awt.event.ActionListener() {
+        jbCancelar_.setBackground(new java.awt.Color(47, 85, 123));
+        jbCancelar_.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jbCancelar_.setForeground(new java.awt.Color(255, 255, 255));
+        jbCancelar_.setText("Cancelar");
+        jbCancelar_.setPreferredSize(new java.awt.Dimension(100, 26));
+        jbCancelar_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCancelarActionPerformed(evt);
+                jbCancelar_ActionPerformed(evt);
             }
         });
 
@@ -173,18 +173,18 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jlTituloCadastro))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtfAlergias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfNome_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfEmail_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfDataNasc_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfPeso_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfAltura_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfAlergias_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
-                            .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbCadastrar_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jtfDoencas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jbCancelar_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfDoencas_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanelCadastroUsuarioLayout.setVerticalGroup(
@@ -195,35 +195,35 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlNome)
-                    .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfNome_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlEmail)
-                    .addComponent(jtfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfEmail_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlDataNasc)
-                    .addComponent(jtfDataNasc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfDataNasc_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlPeso)
-                    .addComponent(jtfPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfPeso_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAltura)
-                    .addComponent(jtfAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfAltura_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAlergias)
-                    .addComponent(jtfAlergias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfAlergias_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlDoencas)
-                    .addComponent(jtfDoencas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfDoencas_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbCadastrar_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCancelar_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
@@ -279,40 +279,40 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
     
     public void cancelar(){
         
-    jtfNome.setText(null);
-    jtfEmail.setText(null);
-    jtfDataNasc.setText(null);
-    jtfPeso.setText(null);
-    jtfAltura.setText(null);
-    jtfDataNasc.setText(null);
-    jtfAlergias.setText(null);
-    jtfDoencas.setText(null);
+    jtfNome_.setText(null);
+    jtfEmail_.setText(null);
+    jtfDataNasc_.setText(null);
+    jtfPeso_.setText(null);
+    jtfAltura_.setText(null);
+    jtfDataNasc_.setText(null);
+    jtfAlergias_.setText(null);
+    jtfDoencas_.setText(null);
     
     }
     
     
     
     
-    private void jtfDataNascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDataNascActionPerformed
+    private void jtfDataNasc_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDataNasc_ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtfDataNascActionPerformed
+    }//GEN-LAST:event_jtfDataNasc_ActionPerformed
 
-    private void jbCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrarActionPerformed
+    private void jbCadastrar_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastrar_ActionPerformed
         // TODO add your handling code here:
         cadastrarUsuario();
         cancelar();
-    }//GEN-LAST:event_jbCadastrarActionPerformed
+    }//GEN-LAST:event_jbCadastrar_ActionPerformed
 
-    private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
+    private void jbCancelar_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelar_ActionPerformed
         // TODO add your handling code here:
         cancelar();
-    }//GEN-LAST:event_jbCancelarActionPerformed
+    }//GEN-LAST:event_jbCancelar_ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanelCadastroUsuario;
-    private javax.swing.JButton jbCadastrar;
-    private javax.swing.JButton jbCancelar;
+    private javax.swing.JButton jbCadastrar_;
+    private javax.swing.JButton jbCancelar_;
     private javax.swing.JLabel jlAlergias;
     private javax.swing.JLabel jlAltura;
     private javax.swing.JLabel jlDataNasc;
@@ -324,12 +324,12 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jlTituloCadastro;
     private javax.swing.JLabel jlTituloPrincipal;
     private javax.swing.JPanel jpTop;
-    private javax.swing.JTextField jtfAlergias;
-    private javax.swing.JTextField jtfAltura;
-    private javax.swing.JTextField jtfDataNasc;
-    private javax.swing.JTextField jtfDoencas;
-    private javax.swing.JTextField jtfEmail;
-    private javax.swing.JTextField jtfNome;
-    private javax.swing.JTextField jtfPeso;
+    private javax.swing.JTextField jtfAlergias_;
+    private javax.swing.JTextField jtfAltura_;
+    private javax.swing.JTextField jtfDataNasc_;
+    private javax.swing.JTextField jtfDoencas_;
+    private javax.swing.JTextField jtfEmail_;
+    private javax.swing.JTextField jtfNome_;
+    private javax.swing.JTextField jtfPeso_;
     // End of variables declaration//GEN-END:variables
 }

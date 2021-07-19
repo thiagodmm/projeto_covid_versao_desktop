@@ -90,6 +90,11 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
         jbCadastreSe.setForeground(new java.awt.Color(0, 0, 102));
         jbCadastreSe.setText("CADASTRE-SE AQUI");
         jbCadastreSe.setPreferredSize(new java.awt.Dimension(150, 40));
+        jbCadastreSe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCadastreSeActionPerformed(evt);
+            }
+        });
         getContentPane().add(jbCadastreSe);
         jbCadastreSe.setBounds(200, 290, 200, 40);
 
@@ -113,6 +118,13 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
         jlDisplay.add(gcheck);
         gcheck.setVisible(true);
     }//GEN-LAST:event_jbIniciarActionPerformed
+
+    private void jbCadastreSeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastreSeActionPerformed
+        // TODO add your handling code here:
+        GUICadastro gcad = new GUICadastro();
+        jlDisplay.add(gcad);
+        gcad.setVisible(true);
+    }//GEN-LAST:event_jbCadastreSeActionPerformed
 
     /**
      * @param args the command line arguments
