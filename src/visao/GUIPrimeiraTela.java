@@ -114,9 +114,10 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
 
     private void jbIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIniciarActionPerformed
         // TODO add your handling code here:
-        GUICheckin gcheck = new GUICheckin();
-        jlDisplay.add(gcheck);
+        GUICheckinFrame gcheck = new GUICheckinFrame();
+        /*jlDisplay.add(gcheck);*/
         gcheck.setVisible(true);
+        
     }//GEN-LAST:event_jbIniciarActionPerformed
 
     private void jbCadastreSeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastreSeActionPerformed

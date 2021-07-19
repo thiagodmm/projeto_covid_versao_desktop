@@ -71,6 +71,11 @@ public class GUICheckin extends javax.swing.JInternalFrame {
         jButton3.setBackground(new java.awt.Color(153, 255, 102));
         jButton3.setText("Me sinto bem, nenhum sintoma");
         jButton3.setPreferredSize(new java.awt.Dimension(300, 40));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("SINTO UM OU MAIS DOS SEGUINTES SINTOMAS:");
@@ -198,6 +203,15 @@ public class GUICheckin extends javax.swing.JInternalFrame {
         */
 
     }//GEN-LAST:event_jbCheckPositivoActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        /*
+        GUINegativo gneg = new GUINegativo();
+        jlDisplay.add(gneg);
+        gneg.setVisible(true);
+        */
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
