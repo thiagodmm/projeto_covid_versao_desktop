@@ -5,11 +5,14 @@
  */
 package dao;
 
+import com.mysql.cj.protocol.Resultset;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import modelo.Adm;
 import modelo.UsuarioVO;
 import persistencia.Conexao;
 
@@ -47,12 +50,42 @@ public class UsuarioDAO {
 }
 
 }   
+
+  
     
+  
+        
+       /* public ResultSet autenticarAdmin (Adm admin) throws SQLException{
+            Connection con = Conexao.getConexao();
+            Statement sta = con.createStatement();
+            
+            try{
+                String sql = "select * from where nomeAdm = ? and senhaAdm = ? ";
+                
+                ResultSet rs= sta.executeQuery(sql);
+                
+                Adm ad = new Adm();
+                ad.setNomeAcesso(1, sta.getNomeAcesso());
+                ad.setSenha(2, sta.getSenha());
+            
+                ResultSet rs= sta.executeQuery(sql);
+                return rs;
+                
+            }catch(SQLException erro){
+                JOptionPane.showMessageDialog(null, "UsuarioDAO: " +erro);
+
+            }
+     return erro;
+        }      
+        */
+            
+   
+
+   
     
-    
-    
-    
-    public ArrayList<UsuarioVO> buscar() throws SQLException{
+  
+        
+        public ArrayList<UsuarioVO> buscar() throws SQLException{
 	Connection con = Conexao.getConexao();
 	Statement stat = con.createStatement();
       
@@ -164,6 +197,10 @@ public class UsuarioDAO {
 
 
 }
+
+    public Resultset autenticarAdmin(UsuarioDAO admin) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      
      
      

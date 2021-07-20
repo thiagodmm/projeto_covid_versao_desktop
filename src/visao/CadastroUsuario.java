@@ -9,20 +9,18 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Thiago Machado
+ * @author jdsma
  */
-
-public class GUICadastroUsuario extends javax.swing.JInternalFrame {
+public class CadastroUsuario extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUICadastroUsuario
+     * Creates new form CadastroUsuario
      */
-    public GUICadastroUsuario() {
+    public CadastroUsuario() {
         initComponents();
     }
     
-    
-        public void cadastrarUsuario(){
+     public void cadastrarUsuario(){
         
         try{
 
@@ -50,8 +48,18 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
 }
 	
 }
+     public void cancelar(){
         
-        
+    jtfNome.setText(null);
+    jtfEmail.setText(null);
+    jtfDataNasc.setText(null);
+    jtfPeso.setText(null);
+    jtfAltura.setText(null);
+    jtfDataNasc.setText(null);
+    jtfAlergias.setText(null);
+    jtfDoencas.setText(null);
+    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,6 +70,9 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpTop = new javax.swing.JPanel();
+        jlTituloPrincipal = new javax.swing.JLabel();
+        jlTituloAdmin = new javax.swing.JLabel();
         jPanelCadastroUsuario = new javax.swing.JPanel();
         jlTituloCadastro = new javax.swing.JLabel();
         jlNome = new javax.swing.JLabel();
@@ -80,15 +91,49 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
         jtfDoencas = new javax.swing.JTextField();
         jbCadastrar = new javax.swing.JButton();
         jbCancelar = new javax.swing.JButton();
-        jpTop = new javax.swing.JPanel();
-        jlTituloPrincipal = new javax.swing.JLabel();
-        jlTituloAdmin = new javax.swing.JLabel();
+        jbCheckinDiario = new javax.swing.JButton();
 
-        setClosable(true);
-        setResizable(true);
-        setPreferredSize(new java.awt.Dimension(600, 500));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        jpTop.setBackground(new java.awt.Color(47, 85, 123));
+
+        jlTituloPrincipal.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
+        jlTituloPrincipal.setForeground(new java.awt.Color(255, 255, 255));
+        jlTituloPrincipal.setText("APP COVID 19");
+
+        jlTituloAdmin.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jlTituloAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        jlTituloAdmin.setText("Sistema de Administração");
+
+        javax.swing.GroupLayout jpTopLayout = new javax.swing.GroupLayout(jpTop);
+        jpTop.setLayout(jpTopLayout);
+        jpTopLayout.setHorizontalGroup(
+            jpTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpTopLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlTituloPrincipal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                .addComponent(jlTituloAdmin)
+                .addContainerGap())
+        );
+        jpTopLayout.setVerticalGroup(
+            jpTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpTopLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlTituloPrincipal)
+                    .addComponent(jlTituloAdmin))
+                .addContainerGap(22, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jpTop);
+        jpTop.setBounds(0, 0, 679, 60);
 
         jPanelCadastroUsuario.setBackground(new java.awt.Color(195, 213, 231));
+        jPanelCadastroUsuario.setDoubleBuffered(false);
+        jPanelCadastroUsuario.setInheritsPopupMenu(true);
+        jPanelCadastroUsuario.setOpaque(false);
 
         jlTituloCadastro.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jlTituloCadastro.setForeground(new java.awt.Color(47, 85, 123));
@@ -156,6 +201,17 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
             }
         });
 
+        jbCheckinDiario.setBackground(new java.awt.Color(47, 85, 123));
+        jbCheckinDiario.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jbCheckinDiario.setForeground(new java.awt.Color(255, 255, 255));
+        jbCheckinDiario.setText("Check-in Diário");
+        jbCheckinDiario.setPreferredSize(new java.awt.Dimension(100, 26));
+        jbCheckinDiario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCheckinDiarioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelCadastroUsuarioLayout = new javax.swing.GroupLayout(jPanelCadastroUsuario);
         jPanelCadastroUsuario.setLayout(jPanelCadastroUsuarioLayout);
         jPanelCadastroUsuarioLayout.setHorizontalGroup(
@@ -163,14 +219,16 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
             .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jlDoencas)
                     .addComponent(jlAlergias)
                     .addComponent(jlAltura)
                     .addComponent(jlPeso)
                     .addComponent(jlDataNasc)
                     .addComponent(jlEmail)
                     .addComponent(jlNome)
-                    .addComponent(jlTituloCadastro))
+                    .addComponent(jlTituloCadastro)
+                    .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlDoencas)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jtfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,12 +238,13 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
                     .addComponent(jtfAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtfAlergias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanelCadastroUsuarioLayout.createSequentialGroup()
-                            .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelCadastroUsuarioLayout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jtfDoencas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(95, Short.MAX_VALUE))
+                            .addComponent(jbCheckinDiario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtfDoencas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         jPanelCadastroUsuarioLayout.setVerticalGroup(
             jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,76 +282,17 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanelCadastroUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(35, Short.MAX_VALUE))
+                    .addComponent(jbCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbCheckinDiario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
-        jpTop.setBackground(new java.awt.Color(47, 85, 123));
-
-        jlTituloPrincipal.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
-        jlTituloPrincipal.setForeground(new java.awt.Color(255, 255, 255));
-        jlTituloPrincipal.setText("APP COVID 19");
-
-        jlTituloAdmin.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-        jlTituloAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        jlTituloAdmin.setText("Sistema de Administração");
-
-        javax.swing.GroupLayout jpTopLayout = new javax.swing.GroupLayout(jpTop);
-        jpTop.setLayout(jpTopLayout);
-        jpTopLayout.setHorizontalGroup(
-            jpTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTopLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlTituloPrincipal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlTituloAdmin)
-                .addContainerGap())
-        );
-        jpTopLayout.setVerticalGroup(
-            jpTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTopLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jpTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlTituloPrincipal)
-                    .addComponent(jlTituloAdmin))
-                .addContainerGap(22, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelCadastroUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jpTop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jpTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelCadastroUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanelCadastroUsuario);
+        jPanelCadastroUsuario.setBounds(-1, 66, 680, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    public void cancelar(){
-        
-    jtfNome.setText(null);
-    jtfEmail.setText(null);
-    jtfDataNasc.setText(null);
-    jtfPeso.setText(null);
-    jtfAltura.setText(null);
-    jtfDataNasc.setText(null);
-    jtfAlergias.setText(null);
-    jtfDoencas.setText(null);
-    
-    }
-    
-    
-    
-    
     private void jtfDataNascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDataNascActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfDataNascActionPerformed
@@ -308,11 +308,53 @@ public class GUICadastroUsuario extends javax.swing.JInternalFrame {
         cancelar();
     }//GEN-LAST:event_jbCancelarActionPerformed
 
+    private void jbCheckinDiarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCheckinDiarioActionPerformed
+        // TODO add your handling code here:
+        CheckinDiario check = new CheckinDiario();
+        check.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbCheckinDiarioActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(CadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(CadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(CadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(CadastroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new CadastroUsuario().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanelCadastroUsuario;
     private javax.swing.JButton jbCadastrar;
     private javax.swing.JButton jbCancelar;
+    private javax.swing.JButton jbCheckinDiario;
     private javax.swing.JLabel jlAlergias;
     private javax.swing.JLabel jlAltura;
     private javax.swing.JLabel jlDataNasc;

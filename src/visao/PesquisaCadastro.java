@@ -14,10 +14,13 @@ import servicos.UsuarioServicos;
 
 /**
  *
- * @author thiag
+ * @author jdsma
  */
-public class GUIBuscaUsuario extends javax.swing.JInternalFrame {
-    
+public class PesquisaCadastro extends javax.swing.JFrame {
+
+    /**
+     * Creates new form PesquisaCadastro
+     */
     DefaultTableModel dtm = new DefaultTableModel(
 
 	new Object[][]{},
@@ -57,8 +60,7 @@ public class GUIBuscaUsuario extends javax.swing.JInternalFrame {
             
 	}
 	
-	}
-    
+}
     
     public void limparTabela(){
     dtm.setNumRows(0);
@@ -90,8 +92,7 @@ public class GUIBuscaUsuario extends javax.swing.JInternalFrame {
 	JOptionPane.showMessageDialog(null, "Ops, algo deu errado! "+e.getMessage(),"Erro!", JOptionPane.ERROR_MESSAGE);
 	}
 }
-
-   
+    
     public void filtrar(){
 try{
 
@@ -174,8 +175,6 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
 		JOptionPane.showMessageDialog(null, "Você não selecionou nenhuma linha!");
 	}
 }
-
- 
  
  public void confirmarAlteracao(){
 	try{
@@ -213,14 +212,8 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
     jtfDoencasAltera.setText(null);
     
     }
-    
-
-    /**
-     * Creates new form GUIBuscaUsuario
-     */
-    public GUIBuscaUsuario() {
+    public PesquisaCadastro() {
         initComponents();
-        preencherTabela();
     }
 
     /**
@@ -262,9 +255,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
         jlEmail = new javax.swing.JLabel();
         jtfEmailAltera = new javax.swing.JTextField();
 
-        setClosable(true);
-        setResizable(true);
-        setPreferredSize(new java.awt.Dimension(600, 500));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jpTop.setBackground(new java.awt.Color(47, 85, 123));
 
@@ -283,7 +274,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
             .addGroup(jpTopLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jlTituloPrincipal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlTituloAdmin)
                 .addContainerGap())
         );
@@ -506,7 +497,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
                     .addComponent(jtfEmailAltera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlAlergias)
                     .addComponent(jtfAlergiasAltera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelPesquisarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbConfirmarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jlDoencas)
@@ -536,12 +527,18 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbTipoDePesquisaActionPerformed
 
+    private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed
+        // TODO add your handling code here:
+        jbConfirmarAlteracao.setEnabled(true);
+        alterarDados();
+    }//GEN-LAST:event_jbAlterarActionPerformed
+
     private void jbExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExcluirActionPerformed
         // TODO add your handling code here:
         deletar();
         limparTabela();
         preencherTabela();
-        JOptionPane.showMessageDialog(null, "Exclusão realizada com sucesso! ","Confirmação", JOptionPane.INFORMATION_MESSAGE);        
+        JOptionPane.showMessageDialog(null, "Exclusão realizada com sucesso! ","Confirmação", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jbExcluirActionPerformed
 
     private void jbConfirmarAlteracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConfirmarAlteracaoActionPerformed
@@ -551,14 +548,8 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
         limparTabela();
         preencherTabela();
         jbConfirmarAlteracao.setEnabled(false);
-        
-    }//GEN-LAST:event_jbConfirmarAlteracaoActionPerformed
 
-    private void jbAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAlterarActionPerformed
-        // TODO add your handling code here:
-        jbConfirmarAlteracao.setEnabled(true);
-        alterarDados();
-    }//GEN-LAST:event_jbAlterarActionPerformed
+    }//GEN-LAST:event_jbConfirmarAlteracaoActionPerformed
 
     private void jtfPesquisarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfPesquisarKeyReleased
         // TODO add your handling code here:
@@ -566,6 +557,40 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
         filtrar();
     }//GEN-LAST:event_jtfPesquisarKeyReleased
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(PesquisaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(PesquisaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(PesquisaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(PesquisaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PesquisaCadastro().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanelPesquisarUsuario;
