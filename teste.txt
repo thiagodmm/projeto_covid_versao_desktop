@@ -1,1 +1,8 @@
-Enviadno teste de commit para branch jaderson
+Enviadno teste de commit para branch jaderson.
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Experimente a nova plataforma cruzada PowerShell https://aka.ms/pscore6
+
+PS D:\Jaderson Maciel\GIT_REPOSITORIO\projeto_covid_versao_desktop> git status
+On branch jaderson
+Your branch is up to date with 'origin/jaderson'.
