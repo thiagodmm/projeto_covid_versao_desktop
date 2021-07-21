@@ -49,7 +49,7 @@ public class GUIBuscaUsuario extends javax.swing.JInternalFrame {
                     });
 
                 } // Fecha For
-                jTableResultado.setModel(dtm);
+                jTableResultado_.setModel(dtm);
                 
 	}catch(Exception e){
 	
@@ -67,12 +67,12 @@ public class GUIBuscaUsuario extends javax.swing.JInternalFrame {
 
     public void deletar(){
 	try{
-	int linha = jTableResultado.getSelectedRow();
+	int linha = jTableResultado_.getSelectedRow();
 	if(linha == -1){
 		JOptionPane.showMessageDialog(null, "Você não selecionou uma linha para exclusão! ","Erro!", JOptionPane.ERROR_MESSAGE);
 	}else{
 		UsuarioServicos us = servicos.ServicosFactory.getUsuarioServicos();
-		String idUsuario = (String) jTableResultado.getValueAt(linha, 0);
+		String idUsuario = (String) jTableResultado_.getValueAt(linha, 0);
                 
                 int r = JOptionPane.showConfirmDialog(null, "Você realmente deseja excluir este produto?","Confirmação", JOptionPane.WARNING_MESSAGE);
                 
@@ -148,7 +148,7 @@ ArrayList<UsuarioVO> user = new ArrayList<>();
                     });
 
                 } // Fecha For
-                jTableResultado.setModel(dtm);
+                jTableResultado_.setModel(dtm);
 }
 }catch(Exception e){
 JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),"Erro!", JOptionPane.ERROR_MESSAGE);
@@ -159,17 +159,17 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
     
  
  public void alterarDados(){
-	int linha = jTableResultado.getSelectedRow();
+	int linha = jTableResultado_.getSelectedRow();
 	if(linha != -1){
 	// Busca os dados da linha selecionada e envia para cada JTextField da tela Cadastrar
-	jtfIdUsuarioAltera.setText((String)jTableResultado.getValueAt(linha, 0));
-	jtfNomeCompletoAltera.setText((String)jTableResultado.getValueAt(linha, 1));
-	jtfEmailAltera.setText((String)jTableResultado.getValueAt(linha, 2));
-	jtfDataNascAltera.setText((String)jTableResultado.getValueAt(linha, 3));
-        jtfPesoAltera.setText((String)jTableResultado.getValueAt(linha, 4));
-        jtfAlturaAltera.setText((String)jTableResultado.getValueAt(linha, 5));
-        jtfAlergiasAltera.setText((String)jTableResultado.getValueAt(linha, 6));
-        jtfDoencasAltera.setText((String)jTableResultado.getValueAt(linha, 7));
+	jtfIdUsuarioAltera.setText((String)jTableResultado_.getValueAt(linha, 0));
+	jtfNomeCompletoAltera.setText((String)jTableResultado_.getValueAt(linha, 1));
+	jtfEmailAltera.setText((String)jTableResultado_.getValueAt(linha, 2));
+	jtfDataNascAltera.setText((String)jTableResultado_.getValueAt(linha, 3));
+        jtfPesoAltera.setText((String)jTableResultado_.getValueAt(linha, 4));
+        jtfAlturaAltera.setText((String)jTableResultado_.getValueAt(linha, 5));
+        jtfAlergiasAltera.setText((String)jTableResultado_.getValueAt(linha, 6));
+        jtfDoencasAltera.setText((String)jTableResultado_.getValueAt(linha, 7));
 	}else{
 		JOptionPane.showMessageDialog(null, "Você não selecionou nenhuma linha!");
 	}
@@ -241,7 +241,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
         jtfAlturaAltera = new javax.swing.JTextField();
         jcbTipoDePesquisa = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTableResultado = new javax.swing.JTable();
+        jTableResultado_ = new javax.swing.JTable();
         jbAlterar = new javax.swing.JButton();
         jbExcluir = new javax.swing.JButton();
         jbConfirmarAlteracao = new javax.swing.JButton();
@@ -316,7 +316,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
             }
         });
 
-        jTableResultado.setModel(new javax.swing.table.DefaultTableModel(
+        jTableResultado_.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -327,7 +327,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
                 "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7", "Title 8"
             }
         ));
-        jScrollPane1.setViewportView(jTableResultado);
+        jScrollPane1.setViewportView(jTableResultado_);
 
         jbAlterar.setBackground(new java.awt.Color(47, 85, 123));
         jbAlterar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -570,7 +570,7 @@ JOptionPane.showMessageDialog(null, "Erro ao filtrar os dados! "+e.getMessage(),
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanelPesquisarUsuario;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTableResultado;
+    private javax.swing.JTable jTableResultado_;
     private javax.swing.JButton jbAlterar;
     private javax.swing.JButton jbConfirmarAlteracao;
     private javax.swing.JButton jbExcluir;

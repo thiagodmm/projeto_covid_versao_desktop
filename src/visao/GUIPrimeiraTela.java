@@ -28,7 +28,7 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jlDisplay = new javax.swing.JLabel();
+        jbAdmin = new javax.swing.JButton();
         jlTitulo2 = new javax.swing.JLabel();
         jlTitulo1 = new javax.swing.JLabel();
         jlTitulo3 = new javax.swing.JLabel();
@@ -42,10 +42,16 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1400, 840));
         getContentPane().setLayout(null);
 
-        jlDisplay.setText("* Label Display");
-        jlDisplay.setPreferredSize(new java.awt.Dimension(1400, 840));
-        getContentPane().add(jlDisplay);
-        jlDisplay.setBounds(0, 0, 1400, 840);
+        jbAdmin.setForeground(new java.awt.Color(0, 0, 102));
+        jbAdmin.setText("Admin");
+        jbAdmin.setPreferredSize(new java.awt.Dimension(100, 30));
+        jbAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAdminActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbAdmin);
+        jbAdmin.setBounds(700, 50, 100, 30);
 
         jlTitulo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jlTitulo2.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,19 +119,21 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIniciarActionPerformed
-        // TODO add your handling code here:
-        GUICheckinFrame gcheck = new GUICheckinFrame();
-        /*jlDisplay.add(gcheck);*/
-        gcheck.setVisible(true);
+        GUICheckInDiario gCheck = new GUICheckInDiario();
+        gCheck.setVisible(true);
         
     }//GEN-LAST:event_jbIniciarActionPerformed
 
     private void jbCadastreSeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCadastreSeActionPerformed
-        // TODO add your handling code here:
-        GUICadastro gcad = new GUICadastro();
-        jlDisplay.add(gcad);
+        GUINovoUsuario gcad = new GUINovoUsuario();
         gcad.setVisible(true);
     }//GEN-LAST:event_jbCadastreSeActionPerformed
+
+    private void jbAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAdminActionPerformed
+        // TODO add your handling code here:
+        GUILista gAdmin = new GUILista();
+        gAdmin.setVisible(true);
+    }//GEN-LAST:event_jbAdminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,11 +171,11 @@ public class GUIPrimeiraTela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jbAdmin;
     private javax.swing.JButton jbCadastreSe;
     private javax.swing.JButton jbIniciar;
     private javax.swing.JLabel jlAvisoCadastro;
     private javax.swing.JLabel jlCreditos;
-    private javax.swing.JLabel jlDisplay;
     private javax.swing.JLabel jlPlanoDeFundo;
     private javax.swing.JLabel jlTitulo1;
     private javax.swing.JLabel jlTitulo2;

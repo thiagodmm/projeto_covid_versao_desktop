@@ -9,12 +9,12 @@ package visao;
  *
  * @author thiag
  */
-public class GUICheckinFrame extends javax.swing.JFrame {
+public class GUICheckInDiario extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUICheckinFrame
+     * Creates new form GUICheckInDiario
      */
-    public GUICheckinFrame() {
+    public GUICheckInDiario() {
         initComponents();
     }
 
@@ -28,41 +28,36 @@ public class GUICheckinFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jlMostra = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        jbCheckNeg = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jbCheckPositivo = new javax.swing.JButton();
+        jbCheckPos = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 500));
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(null);
 
-        jlMostra.setText("jLabel9");
-        jPanel1.add(jlMostra);
-        jlMostra.setBounds(0, 0, 700, 500);
-
         jLabel1.setText("Olá Thiago");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(24, 11, 51, 14);
+        jLabel1.setBounds(24, 11, 120, 14);
 
         jLabel2.setText("Configurações da conta");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(558, 11, 114, 14);
+        jLabel2.setBounds(492, 11, 180, 14);
 
         jButton1.setText("CHECK IN PESSOAL DIÁRIO");
         jButton1.setEnabled(false);
@@ -85,16 +80,16 @@ public class GUICheckinFrame extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(201, 168, 271, 22);
 
-        jButton3.setBackground(new java.awt.Color(153, 255, 102));
-        jButton3.setText("Me sinto bem, nenhum sintoma");
-        jButton3.setPreferredSize(new java.awt.Dimension(300, 40));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbCheckNeg.setBackground(new java.awt.Color(153, 255, 102));
+        jbCheckNeg.setText("Me sinto bem, nenhum sintoma");
+        jbCheckNeg.setPreferredSize(new java.awt.Dimension(300, 40));
+        jbCheckNeg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbCheckNegActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3);
-        jButton3.setBounds(192, 229, 300, 40);
+        jPanel1.add(jbCheckNeg);
+        jbCheckNeg.setBounds(192, 229, 300, 40);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("SINTO UM OU MAIS DOS SEGUINTES SINTOMAS:");
@@ -103,27 +98,27 @@ public class GUICheckinFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Febre alta (acima de 39 graus)");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(260, 345, 147, 14);
+        jLabel6.setBounds(260, 345, 240, 14);
 
         jLabel7.setText("Tosse seca e constante");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(260, 373, 113, 14);
+        jLabel7.setBounds(260, 373, 240, 14);
 
         jLabel8.setText("Dificuldade para respirar");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(260, 400, 117, 14);
+        jLabel8.setBounds(260, 400, 240, 14);
 
-        jbCheckPositivo.setBackground(new java.awt.Color(255, 51, 51));
-        jbCheckPositivo.setForeground(new java.awt.Color(255, 255, 255));
-        jbCheckPositivo.setText("Reportar sintomas de Covid-19");
-        jbCheckPositivo.setPreferredSize(new java.awt.Dimension(250, 40));
-        jbCheckPositivo.addActionListener(new java.awt.event.ActionListener() {
+        jbCheckPos.setBackground(new java.awt.Color(255, 51, 51));
+        jbCheckPos.setForeground(new java.awt.Color(255, 255, 255));
+        jbCheckPos.setText("Reportar sintomas de Covid-19");
+        jbCheckPos.setPreferredSize(new java.awt.Dimension(250, 40));
+        jbCheckPos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbCheckPositivoActionPerformed(evt);
+                jbCheckPosActionPerformed(evt);
             }
         });
-        jPanel1.add(jbCheckPositivo);
-        jbCheckPositivo.setBounds(204, 432, 250, 40);
+        jPanel1.add(jbCheckPos);
+        jbCheckPos.setBounds(204, 432, 250, 40);
         jPanel1.add(jSeparator1);
         jSeparator1.setBounds(34, 201, 611, 10);
         jPanel1.add(jCheckBox1);
@@ -151,23 +146,20 @@ public class GUICheckinFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbCheckNegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCheckNegActionPerformed
         // TODO add your handling code here:
-        GUINegativo gneg = new GUINegativo();
-        jlMostra.add(gneg);
-        gneg.setVisible(true);
+        GUICheckNegativo gNeg = new GUICheckNegativo();
+        gNeg.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jbCheckNegActionPerformed
 
-    private void jbCheckPositivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCheckPositivoActionPerformed
+    private void jbCheckPosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCheckPosActionPerformed
         // TODO add your handling code here:
 
-        /*
-        GUICheckin gcheck = new GUICheckin();
-        jlDisplay.add(gcheck);
-        gcheck.setVisible(true);
-        */
-    }//GEN-LAST:event_jbCheckPositivoActionPerformed
+        GUICheckPositivo gPos = new GUICheckPositivo();
+        gPos.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbCheckPosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,20 +178,20 @@ public class GUICheckinFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUICheckinFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUICheckInDiario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUICheckinFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUICheckInDiario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUICheckinFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUICheckInDiario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUICheckinFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUICheckInDiario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUICheckinFrame().setVisible(true);
+                new GUICheckInDiario().setVisible(true);
             }
         });
     }
@@ -207,7 +199,6 @@ public class GUICheckinFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -221,7 +212,7 @@ public class GUICheckinFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JButton jbCheckPositivo;
-    private javax.swing.JLabel jlMostra;
+    private javax.swing.JButton jbCheckNeg;
+    private javax.swing.JButton jbCheckPos;
     // End of variables declaration//GEN-END:variables
 }
